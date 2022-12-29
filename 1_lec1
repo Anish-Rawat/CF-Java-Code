@@ -1,0 +1,31 @@
+/*
+    QUESTION: There are n numbers (1 to n) and kth number is missing and sum of n-1 numbers is given. Find a kth number.
+    Hint:-
+    The AP can also be written in terms of common differences, as follows;
+        a, a + d, a + 2d, a + 3d, a + 4d, ………. ,a + (n – 1) d Where d is a common difference
+    n-th term of an AP is:
+        an = a + (n − 1) × d
+    sum of n term of AP is :
+        Sn = n/2[2a + (n − 1) × d]
+    The sum of n natural numbers is represented as :
+        Sn = [n (n+1)]/2.
+*/
+import java.util.Scanner;
+
+class AP{
+    public static void main(String[] args){
+        int sum,num;        // where sum is a sum of n-1 number and num is total number
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter total numbers : ");
+        num = sc.nextInt();
+
+        System.out.print("Enter sum of n-1 numbers : ");
+        sum = sc.nextInt();
+
+        int totalsum;       // Where totalsum is a total sum of numbers(num)
+        totalsum = (num*(num+1)/2);
+
+        System.out.println("Missing kth number is : "+(totalsum-sum));
+    }
+}
